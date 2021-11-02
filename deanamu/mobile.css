@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+*{
+    -webkit-tap-highlight-color : rgab(0, 0, 0, 0);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+:root{
+        --div-width: calc(100vw - 50px);
+
+        --html-background-color: #F3F3F3;
+        --div-background-color: #ffffff;
+        --form-background-color: rgba(242, 105, 89, 0.3);
+        --google-a-color: rgba(242, 105, 89, 1);
+        --text-color: #000;
+}
+
+/*
+@media (prefers-color-scheme: light) {
+    :root{
+        --html-background-color: #F3F3F3;
+        --div-background-color: #ffffff;
+        --form-background-color: rgba(242, 105, 89, 0.3);
+        --google-a-color: rgba(242, 105, 89, 1);
+        --text-color: #000;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --html-background-color: #151519;
+        --div-background-color: #2D2D2D;
+        --form-background-color: rgba(242, 105, 89, 0.3);
+        --google-a-color: rgba(242, 105, 89, 1);
+        --text-color: #fff;
+    }
+    option{
+        background-color: #683F3A;
+    }
+}
+*/
+
+html, body, input, select, textarea, a{
+    color: var(--text-color);
+}
+
+@keyframes in {
+    from {
+        box-shadow: 0 0 0 0px var(--google-a-color) inset;
+    }
+    to {
+        box-shadow: 0 0 0 1px var(--google-a-color) inset;
+    }
+}
+@keyframes out {
+    from {
+        box-shadow: 0 0 0 1px var(--google-a-color) inset;
+    }
+    to {
+        box-shadow: 0 0 0 0px var(--google-a-color) inset;
+    }
+}
+input, textarea, select{
+    animation: out 0.25s;
+    animation-fill-mode: forwards;
+}
+input:hover, textarea:hover, select:hover, input:focus, textarea:focus, select:focus{
+    animation: in 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.ca{
+    text-decoration: none;
+    color: var(--google-a-color);
+}
+.ca:hover{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: var(--html-background-color);
+    
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+}
+div{
+    display: inline-block;
+    text-align: left;
+}
+
+.ifr{
+    border: 0;
+    outline: 0;
+}
+.btn{
+    padding: 5px 15px;
+}
+.bxt{
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-color: var(--form-background-color);
+    font-size: 15px;    
+}
+@keyframes fin {
+    from {
+        height: 50px;
+        box-shadow: 0 0 0 0px var(--google-a-color) inset;
+    }
+    to {
+        height: 200px;
+        box-shadow: 0 0 0 1px var(--google-a-color) inset;
+    }
+}
+@keyframes fout {
+    from {
+        height: 200px;
+        box-shadow: 0 0 0 1px var(--google-a-color) inset;
+    }
+    to {
+        height: 50px;
+        box-shadow: 0 0 0 0px var(--google-a-color) inset;
+    }
+}
+.content{
+    resize: none;
+    margin-top: 7px;
+    width: calc(100vw - 75px);
+
+    height: 50px;
+    animation: fout 0.25s;
+    animation-fill-mode: forwards;
+}
+.content:focus, .content:hover{
+    animation: fin 0.25s;
+    animation-fill-mode: forwards;
+}
+.title{
+    width: calc(100vw - 75px - 114px);
+    margin-bottom: 7px;
+}
+.sep{
+    
+    width: calc(100vw - 190px);
+}
+.tag{
+    appearance: none;
+    width: 110px;
+    text-align: center;
+}
+.sub{
+    width: 100px;
+    padding: 10px 10px;   
+}
+
+
+.apx, .apc{
+    font-size: 12px;
+}
+.apx{
+    margin: 8px 0px;
+}
+.inset{
+    width: var(--div-width);
+    background-color: var(--div-background-color);
+    padding: 25px;
+    margin-bottom: 20px;
+}
+.div_pol{
+    display: inline-block;
+    margin-left: 20px;
+    color: var(--google-a-color);
+}
+.insetc{
+    font-family: 'Song Myung', serif;
+}
+.code{
+    color: var(--google-a-color);
+    font-family: 'Song Myung', serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.ist{
+    margin: 5px 0px;
+}
+.ctitle{
+    margin: 20px 0 8px 0;
+    font-family: 'Song Myung', serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.ctag{
+    background-color: var(--form-background-color);
+    padding: 5px 15px;
+    margin: 25px 0 10px 0;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.ctime{
+    font-size: 15px;
+}
+.tops{
+    margin-top: 25px;
+}
+.ydsp{
+    
+    font-size: 25px;
+}
+.yds{
+    font-size: 50px;
+}
+.ydsp, .yds, .yqs{
+    font-family: 'Song Myung', serif;   
+    text-decoration: none;
+    color: var(--google-a-color);
+}
+.ysp{
+    text-align: right;
+}
